@@ -1,17 +1,16 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        String a = Integer.toString(123);
-        String b = Double.toString(3.14);
-        String c = Character.toString('&');
-        String d = Boolean.toString(false);
+        ArrayList<Integer> list = new ArrayList<>();
 
-        String x = a + b + c + d;
+        list.add(3);
+        list.add(1);
+        list.add(2);
 
-        System.out.println(x);
-
+        System.out.println(list);
 
     }
 }

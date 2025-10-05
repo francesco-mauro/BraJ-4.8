@@ -3,11 +3,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        Integer a = 123;
+        double b = 3.14;
+        Character c = '$';
+        Boolean d = true;
+        String e = "Pizza";
 
-       Car car = new Car("Corvette", 2025, "V8");
+        //Unboxing
+        System.out.println(a);
+        int x = a;
 
-        System.out.println(car.model);
-        System.out.println(car.year);
-        car.start();
+        System.out.println(b);
+        System.out.println(a);
+
+
     }
 }

@@ -3,18 +3,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Integer a = 123;
-        double b = 3.14;
-        Character c = '$';
-        Boolean d = true;
-        String e = "Pizza";
+        String a = Integer.toString(123);
+        String b = Double.toString(3.14);
+        String c = Character.toString('&');
+        String d = Boolean.toString(false);
 
-        //Unboxing
-        System.out.println(a);
-        int x = a;
+        String x = a + b + c + d;
 
-        System.out.println(b);
-        System.out.println(a);
+        System.out.println(x);
 
 
     }

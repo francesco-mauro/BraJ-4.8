@@ -5,26 +5,23 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in)
+        Scanner scanner = new Scanner(System.in);
 
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> foods = new ArrayList<>();
 
-        list.add("Orange");
-        list.add("Apple");
-        list.add("Banana");
+        System.out.println("Enter the # of food you would like: ");
+        int numOfFood = scanner.nextInt();
+        scanner.nextLine();
 
-        list.set(1, "Pineapple");
-
-        System.out.println(list.get(0));
-        System.out.println(list.size());
-
-        Collections.sort(list);
-
-        System.out.println(list);
-
-        for (String fruit : list){
-            System.out.println(fruit);
+        for (int i = 1; i <= numOfFood; i++) {
+            System.out.println("Enter food number # " + i + ": ");
+            String food = scanner.nextLine();
+            foods.add(food);
         }
+
+        System.out.println(foods);
+
+        scanner.close();
 
     }
 }

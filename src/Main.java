@@ -3,33 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
 
-//        String infoTitle;
-//        int infoPages;
-//
-//        System.out.println("Inserisci il titolo del libro");
-//        infoTitle = scanner.nextLine();
-//
-//        System.out.println("Inserisci il numero di pagine del libro");
-//        infoPages = scanner.nextInt();
+       Car car = new Car("Corvette", 2025, "V8");
 
-        Book book1 = new Book("The Fellowship of the ring", 423);
-        Book book2 = new Book("The two Towers", 354);
-        Book book3 = new Book("The return of the King", 416);
-
-        Book[] books = {book1, book2, book3};
-
-        Library library = new Library("Roswater Library", 1993, books);
-
-        library.displayInfo();
-
-
-
-
-
-
-
-        scanner.close();
+        System.out.println(car.model);
+        System.out.println(car.year);
+        car.start();
     }
 }

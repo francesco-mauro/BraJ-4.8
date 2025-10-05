@@ -20,11 +20,14 @@ public class Main {
 
         Book[] books = {book1, book2, book3};
 
+        Library library = new Library("Roswater Library", 1993, books);
+
+        library.displayInfo();
 
 
-        for (Book book: books){
-            System.out.println(book.displayInfo());
-        }
+
+
+
 
 
         scanner.close();

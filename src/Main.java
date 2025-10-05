@@ -1,16 +1,30 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Integer> list = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in)
 
-        list.add(3);
-        list.add(1);
-        list.add(2);
+        ArrayList<String> list = new ArrayList<>();
+
+        list.add("Orange");
+        list.add("Apple");
+        list.add("Banana");
+
+        list.set(1, "Pineapple");
+
+        System.out.println(list.get(0));
+        System.out.println(list.size());
+
+        Collections.sort(list);
 
         System.out.println(list);
+
+        for (String fruit : list){
+            System.out.println(fruit);
+        }
 
     }
 }

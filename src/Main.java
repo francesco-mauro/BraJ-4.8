@@ -1,27 +1,29 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        String filePath = "C:\\Users\\norma\\Desktop\\test.txt";
+        String textContent = """
+                BOToTY
+                BOOOOOTY
+                 BOOOOOOOTY""";
 
-        ArrayList<String> foods = new ArrayList<>();
+        try (FileWriter writer = new FileWriter(filePath)) {
+            writer.write(textContent);
+            System.out.println("File has been written");
 
-        System.out.println("Enter the # of food you would like: ");
-        int numOfFood = scanner.nextInt();
-        scanner.nextLine();
+        } catch (FileNotFoundException e) {
+            System.out.println("Could not locate file location");
 
-        for (int i = 1; i <= numOfFood; i++) {
-            System.out.println("Enter food number # " + i + ": ");
-            String food = scanner.nextLine();
-            foods.add(food);
+        } catch (IOException e) {
+            System.out.println("Could not write file");
+            throw new RuntimeException(e);
         }
-
-        System.out.println(foods);
-
-        scanner.close();
 
     }
 }
+
